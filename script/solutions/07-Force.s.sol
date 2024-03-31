@@ -5,7 +5,7 @@ import {Script, console2} from "forge-std/Script.sol";
 import {EthernautHelper} from "../setup/EthernautHelper.sol";
 
 // NOTE You can import your helper contracts & create interfaces here
-import {ForceAttackContract} from "src/07-Force-AttatckContract.sol";
+import {ForceAttackContract} from "src/07-Force-AttackContract.sol";
 
 contract ForceSolution is Script, EthernautHelper {
     address constant LEVEL_ADDRESS = 0xb6c2Ec883DaAac76D8922519E63f875c2ec65575;

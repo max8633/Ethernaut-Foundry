@@ -5,7 +5,7 @@ import {Script, console2} from "forge-std/Script.sol";
 import {EthernautHelper} from "../setup/EthernautHelper.sol";
 
 // NOTE You can import your helper contracts & create interfaces here
-import {ReentranceAttackContract} from "src/10-Reentrance-AttatckContract.sol";
+import {ReentranceAttackContract} from "src/10-Reentrance-AttackContract.sol";
 
 contract ReentranceSolution is Script, EthernautHelper {
     address constant LEVEL_ADDRESS = 0x2a24869323C0B13Dff24E196Ba072dC790D52479;

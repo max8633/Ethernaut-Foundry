@@ -5,6 +5,7 @@ import {Script, console2} from "forge-std/Script.sol";
 import {EthernautHelper} from "../setup/EthernautHelper.sol";
 
 // NOTE You can import your helper contracts & create interfaces here
+import {ElevatorAttackContract} from "src/11-Elevator-AttackContract.sol";
 
 contract ElevatorSolution is Script, EthernautHelper {
     address constant LEVEL_ADDRESS = 0x6DcE47e94Fa22F8E2d8A7FDf538602B1F86aBFd2;
@@ -16,8 +17,11 @@ contract ElevatorSolution is Script, EthernautHelper {
         address challengeInstance = createInstance(LEVEL_ADDRESS);
 
         // YOUR SOLUTION HERE
+        ElevatorAttackContract attack = new ElevatorAttackContract(
+            challengeInstance
+        );
 
-
+        attack.attack();
 
         // SUBMIT CHALLENGE. (DON'T EDIT)
         bool levelSuccess = submitInstance(challengeInstance);
